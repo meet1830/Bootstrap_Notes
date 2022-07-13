@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <!-- js included at last of document -->
+
+  <style>
+    [class*="col"] {
+      padding: 1rem;
+      background-color: #33b5e5;
+      border: 2px solid #fff;
+      color: #fff;
+    }
+
+    /* for gutter */
+    .child {
+      background-color: darkblue;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>Hello World!</h1>
+  <!-- contains default bootstrap font to confirmed that bootstrap is included -->
+
+  <!-- grid is by default divided into 12 columns -->
+
+  <div class="container border">Content</div>
+  <!-- simple div with text. when included border it has thin line of border on all 4 sides. the div does not span the whole width of the page because it uses default breakpoint of size of screens -->
+  <br>
+  <div class="container-fluid border">Content that extends to full page</div>
+  <!-- if want the container to span full page width then use this class -->
+
+  <!-- go to bootstrap website -> docs -> layouts -> containers and see different container classes -->
+  <br>
+
+  <div class="container-md border">Content</div>
+  <!-- as shown in website table md means of medium size -> it will be responsive and will change sizes according to breakpoints but when go below medium breakpoint and after that will behave like fluid container -->
+  <br>
+
+  <div class="container-md">
+    <div class="row">
+      <div class="col">Col 1</div>
+      <div class="col">Col 2</div>
+    </div>
+    <br>
+    <!-- here both the divs of col class gets assigned in one row though they are divs because of row class. cols are styled as per css in the head. can include more rows are follows -->
+
+    <div class="row">
+      <div class="col">Col 1</div>
+      <div class="col">Col 2</div>
+      <div class="col">Col 3</div>
+      <!-- the width of col will be auto calculated according to container-md class -->
+    </div>
+    <br>
+
+    <div class="row">
+      <div class="col-6">Col 1 with 6 width</div>
+      <div class="col-4">Col 2 with 4 width</div>
+      <div class="col">Col 3 with auto width</div>
+      <!-- if want to have columns of specific sizes then mention size after the col class. if just defined col then the size will be auto calculated -->
+    </div>
+    <br>
+
+    <!-- this type of col making will not wrap when page shrinks. hence we also will give break points with size -->
+    <div class="row">
+      <div class="col-md-6">Col 1 with 6 width with wrap</div>
+      <div class="col-md-4">Col 2 with 4 width with wrap</div>
+      <div class="col-md">Col 3 with auto width with wrap</div>
+    </div>
+    <br>
+
+    <!-- mostly will combine breakpoints for different use cases if want different width for different size of screens, here in large will have width 8 and 6 but if goes below 992 that is large, then will change to medium with width 6 and 4 and will continue wrapping with medium thereafter -->
+    <div class="row">
+      <div class="col-lg-8 col-md-6">Col 1 with 6 width with wrap</div>
+      <div class="col-lg-6 col-md-4">Col 2 with 4 width with wrap</div>
+      <div class="col-md">Col 3 with auto width with wrap</div>
+    </div>
+
+  </div>
+
+  <!-- complex example where changing size for all the screen sizes, will have one column for xxl screens and goes all the way with 12 columns for mobile screens, and grid is by default divided into 12 columns hence for xxl screens each div id occupy 1 column and for mobile screens each div will occupy 12 columns that means whole row -->
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6
+        col-xs-12</div>
+      <div class="col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6
+        col-xs-12</div>
+      <div class="col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6
+        col-xs-12</div>
+      <div class="col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6
+        col-xs-12</div>
+      <div class="col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6
+        col-xs-12</div>
+      <div class="col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6
+        col-xs-12</div>
+      <div class="col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6
+        col-xs-12</div>
+      <div class="col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6
+        col-xs-12</div>
+      <div class="col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6
+        col-xs-12</div>
+      <div class="col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6
+        col-xs-12</div>
+      <div class="col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6
+        col-xs-12</div>
+      <div class="col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-6
+        col-xs-12</div>
+    </div>
+  </div>
+
+  <!-- docs -> layout -> columns -->
+  <!-- can do align items -> vertical alignment and justify content - horizontal alignment. can check other options on website -->
+  <div class="container border">
+    <div class="row align-items-center" style="height: 200px; background-color: rgb(202, 198, 198); margin: 20px;">
+      <div class="col">Col 1</div>
+      <div class="col">Col 2</div>
+      <div class="col">Col 3</div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-4">Col 1</div>
+    </div>
+  </div>
+
+  <!-- docs -> layouts -> gutters -->
+  <!-- my means margin in y axis -->
+  <!-- gutters contain values from 1 to 5. in gx - gutter in x axis it works between column and row and in y axis it works between the columns. works as padding in x axis and as margin in y -->
+  <div class="container my-5 border">
+    <div class="row gx-1 gy-5">
+      <div class="col-6"><div class="child">1</div></div>
+      <div class="col-6"><div class="child">2</div></div>
+      <div class="col-6"><div class="child">3</div></div>
+      <div class="col-6"><div class="child">4</div></div>
+    </div>
+  </div>
+
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

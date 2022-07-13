@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <!-- docs -> content -> typography -->
+
+  <div class="container">
+    <h1>Bootstrap Heading 1</h1>
+  </div>
+  <!-- the typography in bootstrap is responsive and changes font-size with size of webpage -->
+
+
+  <!-- if dont want to apply h1, etc for seo reasons then just apply class and will get same results. from h1 to h6 -->
+  <p class="h1">h1. Bootstrap heading</p>
+
+  <!-- heading with muted text -->
+  <h3>My name is <small class="text-muted">Meet Mehta</small></h3>
+
+  <!-- heading which stands out -->
+  <h1 class="display-1">Heading Display 1</h1>
+
+  <!-- paragraph that stands out -->
+  <p class="lead">I am learning Bootstrap.</p>
+
+
+  <!-- inline text elements -->
+  <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+  <p><del>This line of text is meant to be treated as deleted text.</del></p>
+  <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+  <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+  <p><u>This line of text will render as underlined.</u></p>
+  <p><small>This line of text is meant to be treated as fine print.</small></p>
+  <p><strong>This line rendered as bold text.</strong></p>
+  <p><em>This line rendered as italicized text.</em></p>
+  <!-- mark, small, s, u should be used for semantics. to style text without semantics use classes .mark, .small, .text-decoration-underline, .text-decoration-line-through. can use b and i. they are not semantic -->
+
+
+  <!-- For quoting blocks of content from another source within your document. Wrap <blockquote class="blockquote"> around any HTML as the quote. -->
+  <blockquote class="blockquote">
+    <p>A well-known quote, contained in blockquote element</p>
+  </blockquote>
+
+  <!-- naming a source -> when giving attribution, use blockquote-footer in a block level element like figcaption. text-end means right justified -->
+  <figure class="text-end">
+    <blockquote class="blockquote">
+      <p>A well-known quote, contained in a blockquote element.</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Someone famous in <cite title="Source Title">Source Title</cite>
+    </figcaption>
+  </figure>
+
+
+  <!-- lists -->
+  <!-- unstyled means not adding bullets -> the unstyled option applies to the immediate children of it and hence nested children are styled with bullets again -->
+  <div class="row">
+    <ul class="list-unstyled">
+      <li>Line number 1</li>
+      <li>Line number 2</li>
+      <li>Line number 3</li>
+      <li>Line number 4</li>
+      <li>Line number 5</li>
+      <ul>
+        <li>Subline number 1</li>
+        <li>Subline number 2</li>
+        <li>Subline number 3</li>
+      </ul>
+    </ul>
+
+    <ul class="list-inline">
+      <li class="list-inline-item">This is a list item.</li>
+      <li class="list-inline-item">And another one.</li>
+      <li class="list-inline-item">But they're displayed inline.</li>
+    </ul>
+  </div>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
